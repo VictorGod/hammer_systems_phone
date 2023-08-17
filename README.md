@@ -1,7 +1,7 @@
 # # hammer_systems_phone
-API для авторизации и управления профилями пользователей
+# API для авторизации и управления профилями пользователей
 Авторизация
-Запрос на ввод номера телефона
+# Запрос на ввод номера телефона
 URL: /profile
 Метод: POST
 Параметры запроса:
@@ -10,46 +10,39 @@ Download as CSV
 Параметр	Тип	Описание
 phone_number	string	Номер телефона
 Пример запроса:
-json
-
-Copy
+```json
 
 {
   "phone_number": "1234567890"
 }
+```
 Ответ:
 Успешный ответ:
-json
-
-Copy
-
+```json
   {
     "phone_number": "1234567890",
     "authorization_code": "1234",
     "invite_code": "ABC123",
     "activated_invite_code": null
   }
+```
 Ошибка:
-json
-
-Copy
-
+```json
   {
     "message": "Пользователь не найден"
   }
+```
 Запрос на ввод кода авторизации
 URL: /authorize
 Метод: POST
-Параметры запроса:
-Toggle word wrap: off
-Download as CSV
-Параметр	Тип	Описание
+
+Параметр	    Тип	    Описание
 phone_number	string	Номер телефона
 authorization_code	string	Код авторизации
 Пример запроса:
 json
 
-Copy
+
 
 {
   "phone_number": "1234567890",
@@ -67,7 +60,7 @@ Copy
 Ошибка:
 json
 
-Copy
+
 
   {
     "message": "Неверный код авторизации"
@@ -77,15 +70,13 @@ Copy
 URL: /profile
 Метод: POST
 Параметры запроса:
-Toggle word wrap: off
-Download as CSV
 Параметр	Тип	Описание
 phone_number	string	Номер телефона
 invite_code	string	Инвайт-код
 Пример запроса:
 json
 
-Copy
+
 
 {
   "phone_number": "1234567890",
@@ -94,7 +85,6 @@ Copy
 Ответ:
 json
 
-Copy
 
 {
   "phone_number": "1234567890",
@@ -106,15 +96,13 @@ Copy
 URL: /profile
 Метод: POST
 Параметры запроса:
-Toggle word wrap: off
-Download as CSV
 Параметр	Тип	Описание
 phone_number	string	Номер телефона
 invite_code	string	Инвайт-код
 Пример запроса:
 json
 
-Copy
+
 
 {
   "phone_number": "1234567890",
@@ -136,8 +124,7 @@ Copy
 URL: /invited_users
 Метод: GET
 Параметры запроса:
-Toggle word wrap: off
-Download as CSV
+
 Параметр	Тип	Описание
 phone_number	string	Номер телефона
 Пример запроса:
@@ -146,18 +133,18 @@ phone_number	string	Номер телефона
 Успешный ответ:
 json
 
-Copy
+
 
   {
     "invited_users": [
-      "0987654321",
+        0987654321
       "9876543210"
     ]
   }
 Ошибка:
 json
 
-Copy
+
 
   {
     "message": "Пользователь не найден"
