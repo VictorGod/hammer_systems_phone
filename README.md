@@ -3,9 +3,7 @@
 URL: /profile
 Метод: POST
 Параметры запроса:
-Toggle word wrap: off
-Download as CSV
-Параметр	Тип	Описание
+Параметр	    Тип	    Описание
 phone_number	string	Номер телефона
 Пример запроса:
 ```json
@@ -119,7 +117,7 @@ URL: /invited_users
 Параметр	    Тип	    Описание
 phone_number	string	Номер телефона
 Пример запроса:
-/invited_users?phone_number=1234567890
+http://127.0.0.1:8000/api/auth/invited_users?phone_number=89065310821
 Ответ:
 Успешный ответ:
 ```json
