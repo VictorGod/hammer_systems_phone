@@ -12,7 +12,7 @@ python manage.py migrate
 
 Ваш проект запустился на http://127.0.0.1:8000/
 # Запрос на ввод номера телефона
-URL: /profile
+URL: http://127.0.0.1:8000/api/auth//profile/
 Метод: POST
 Параметры запроса:
 Параметр:	phone_number,    
@@ -42,7 +42,7 @@ URL: /profile
   }
 ```
 # Запрос на ввод кода авторизации
-URL: /authorize
+URL: http://127.0.0.1:8000/api/auth/authorize/
 Метод: POST
 Параметр:	phone_number  ,  
 Тип: string,   	
@@ -76,7 +76,7 @@ URL: /authorize
 
 # Профиль пользователя
 Запрос на получение профиля пользователя
-URL: /profile
+URL: http://127.0.0.1:8000/api/auth/profile/
 Метод: POST
 Параметры запроса:
 Параметр:	phone_number,    
@@ -103,7 +103,7 @@ URL: /profile
 }
 ```
 # Активация инвайт-кода
-URL: /profile
+URL: http://127.0.0.1:8000/api/auth//profile/
 Метод: POST
 Параметры запроса:
 Параметр:	phone_number,    
@@ -133,7 +133,7 @@ URL: /profile
 ```
 # Список пользователей, введших инвайт-код
 Запрос на получение списка пользователей
-URL: /invited_users
+URL: http://127.0.0.1:8000/api/auth/invited_users/
 Метод: GET
 Параметры запроса:
 Параметр:	phone_number    
