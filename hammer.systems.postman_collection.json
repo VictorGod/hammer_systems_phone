@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "59d8811f-85c7-4d7b-9ac2-4e954f21f188",
+		"name": "hammer.systems",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24926671"
+	},
+	"item": [
+		{
+			"name": "Запрос на ввод номера телефона",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": ""
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"phone_number\": \"1234567890\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/auth/profile/"
+			},
+			"response": []
+		},
+		{
+			"name": "Запрос на ввод кода авторизации",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": ""
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"phone_number\": \"1234567890\",\r\n  \"authorization_code\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/auth/authorize/"
+			},
+			"response": []
+		},
+		{
+			"name": "Профиль пользователя",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjczOTMyNDM1LCJpYXQiOjE2NzM4NDYwMzUsImp0aSI6IjY4NTYxZTgyZTAwMTRjMjBiOTQ1NjUwN2ZlODljMmVhIiwidXNlcl9pZCI6M30.Bg8IoFFigZUDJybSeJu_R_Uad8HVtad5POvQkXAONqY"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"phone_number\": \"1234567890\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/auth/profile/"
+			},
+			"response": []
+		},
+		{
+			"name": "Активация инвайт-кода",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": ""
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": ".m,",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"phone_number\": \"1234567890\",\r\n  \"invite_code\": \"MMIDAO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/auth/profile/"
+			},
+			"response": []
+		},
+		{
+			"name": "Список пользователей, введших инвайт-код",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/invited_users/?phone_number=89065310821",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"invited_users",
+						""
+					],
+					"query": [
+						{
+							"key": "phone_number",
+							"value": "89065310821"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
