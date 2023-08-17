@@ -3,8 +3,9 @@
 URL: /profile
 Метод: POST
 Параметры запроса:
-Параметр	    Тип	    Описание
-phone_number	string	Номер телефона
+Параметр:	phone_number    
+Тип: string	    	
+Описание: Номер телефона
 Пример запроса:
 ```json
 
@@ -31,10 +32,13 @@ phone_number	string	Номер телефона
 Запрос на ввод кода авторизации
 URL: /authorize
 Метод: POST
+Параметр:	phone_number    
+Тип: string	    	
+Описание: Номер телефона
+Параметр:	authorization_code   
+Тип: string	    	
+Описание:  Код авторизации
 
-Параметр	             Тип	        Описание
-phone_number	         string	      Номер телефона
-authorization_code	   string	      Код авторизации
 Пример запроса:
 ```json
 {
@@ -63,9 +67,13 @@ authorization_code	   string	      Код авторизации
 URL: /profile
 Метод: POST
 Параметры запроса:
-Параметр	    Тип	    Описание
-phone_number	string	Номер телефона
-invite_code	  string	Инвайт-код
+Параметр:	phone_number    
+Тип: string	    	
+Описание: Номер телефона
+Параметр:	invite_code   
+Тип: string	    	
+Описание:  Инвайт-код
+
 Пример запроса:
 ```json
 {
@@ -86,9 +94,12 @@ invite_code	  string	Инвайт-код
 URL: /profile
 Метод: POST
 Параметры запроса:
-Параметр	    Тип	    Описание
-phone_number	string	Номер телефона
-invite_code	  string	Инвайт-код
+Параметр:	phone_number    
+Тип: string	    	
+Описание: Номер телефона
+Параметр:	invite_code   
+Тип: string	    	
+Описание:  Инвайт-код
 Пример запроса:
 ```json
 
@@ -113,9 +124,9 @@ invite_code	  string	Инвайт-код
 URL: /invited_users
 Метод: GET
 Параметры запроса:
-
-Параметр	    Тип	    Описание
-phone_number	string	Номер телефона
+Параметр:	phone_number    
+Тип: string	    	
+Описание: Номер телефона
 Пример запроса:
 http://127.0.0.1:8000/api/auth/invited_users?phone_number=89065310821
 Ответ:
