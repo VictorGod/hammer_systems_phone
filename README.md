@@ -1,15 +1,9 @@
 ## API для авторизации и управления профилями пользователей
  # Установка
 В созданной директории установите виртуальное окружение, активируйте его и установите необходимые зависимости: python3 -m venv venv . venv/bin/activate pip install -r requirements.txt
-
 Выполните миграции:
-
 python manage.py migrate
-
-Создайте суперпользователя: python manage.py createsuperuser
-
 Запустите сервер: python manage.py runserver
-
 Ваш проект запустился на http://127.0.0.1:8000/
 # Запрос на ввод номера телефона
 URL: http://127.0.0.1:8000/api/auth//profile/
