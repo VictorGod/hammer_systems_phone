@@ -11,7 +11,7 @@ python manage.py migrate
 Ваш проект запустился на http://127.0.0.1:8000/
 
 # Запрос на ввод номера телефона
-URL: http://127.0.0.1:8000/api/auth//profile/
+URL: http://127.0.0.1:8000/api/auth/profile/
 Метод: POST
 Параметры запроса:
 Параметр:	phone_number,    
@@ -102,7 +102,7 @@ URL: http://127.0.0.1:8000/api/auth/profile/
 }
 ```
 # Активация инвайт-кода
-URL: http://127.0.0.1:8000/api/auth//profile/
+URL: http://127.0.0.1:8000/api/auth/profile/
 Метод: POST
 Параметры запроса:
 Параметр:	phone_number,    
